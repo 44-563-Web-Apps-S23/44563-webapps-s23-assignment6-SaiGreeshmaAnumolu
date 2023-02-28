@@ -16,14 +16,17 @@
 
     <input type="button" onclick="checkPainter()" value="Check the guess">
 </form>
-
+<br>
+<div class="container">
+    <img src="Althea Shrub.jpg" id="image" onclick="selectImage()" alt="Althea Shrub" style="width: 100px;height: 100px;">
+</div>
 <p id="result">The results will be replaced </p>
 
 
 <script> 
     var good =0;
     var oops =0;
-    
+    useImage = 1;
     function checkPainter(){
         console.log("Check the guess")
 
@@ -43,6 +46,19 @@
             out.innerHTML = "Correct guess: "+ good +"Wrong guess: " + oops;
         }
     }
+    function selectImage() {
+    switch (useImage) {
+        case 1: useImage = useImage + 1
+            image.src="Althea Shrub.jpg";
+            break;
+        case 2: useImage = useImage + 1
+            image.src = "Ninebark.jpg";
+            break;
+        case 3: useImage = useImage + 1
+            image.src = "Lantana.jpg";
+            break;
+    }
+}
 </script>
 
 </body>
